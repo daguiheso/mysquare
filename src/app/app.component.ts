@@ -21,6 +21,8 @@ export class AppComponent {
     { name: 'kokorico', active: true },
     { name: 'Hornitos', active: false }
   ];
+  lat: number = 4.6294303;
+  lng: number = -74.092209;
 
   constructor() {}
 
