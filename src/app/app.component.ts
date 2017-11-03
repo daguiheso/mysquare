@@ -7,16 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mysquare';
-  listo = false;
-  nombre:string = '';
+  places: any = [
+    { name: 'Panpaya', active: true },
+    { name: 'Dolking Donuts', active: false },
+    { name: 'Sopas de la Abuela', active: true },
+    { name: 'Subway', active: true },
+    { name: 'Cubano', active: true },
+    { name: 'TG Fridays', active: true },
+    { name: 'El Corral', active: false },
+    { name: 'Mtr Lee', active: true },
+    { name: 'Randys', active: true },
+    { name: 'PPC', active: true },
+    { name: 'kokorico', active: true },
+    { name: 'Hornitos', active: false }
+  ];
 
-  constructor() {
-    setTimeout(() => {
-      this.listo = true;
-    }, 3000)
-  }
+  constructor() {}
 
-  hacerAlgo() {
-    alert('hola mundo!!');
-  }
 }

@@ -1,14 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <hr>
-  <button [disabled]="!listo" (click)="hacerAlgo()" >Click me!</button>
-  <hr>
-  <input type="text" placeholder="Tu nombre" [(ngModel)]="nombre" />
-  <br>
-  <p>Mi nombre es {{nombre}}</p>
-</div>
-
-
+<ul>
+  <ng-container *ngFor="let place of places">
+    <li *ngIf="place.active">{{place.name}}</li>
+  </ng-container>
+</ul>
