@@ -11,7 +11,7 @@ export class AppComponent {
     { name: 'Panpaya', active: true },
     { name: 'Dolking Donuts', active: false },
     { name: 'Sopas de la Abuela', active: true },
-    { name: 'Subway', active: true },
+    { name: 'Subway', active: false },
     { name: 'Cubano', active: true },
     { name: 'TG Fridays', active: true },
     { name: 'El Corral', active: false },
