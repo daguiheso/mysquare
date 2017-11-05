@@ -13,7 +13,7 @@ import { PlacesComponent } from './places/places.component';
 const appRoutes: Routes = [
   {path: '', component: PlacesComponent},
   {path: 'places', component: PlacesComponent},
-  {path: 'detail', component: DetailComponent}
+  {path: 'detail/:id', component: DetailComponent}
 ];
 
 @NgModule({
