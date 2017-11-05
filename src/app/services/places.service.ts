@@ -26,4 +26,8 @@ export class PlacesService {
 	public findPlace(id) {
 		return this.places.find((place) => { return place.id == id }) || null;
 	}
+
+	public savePlace(place) {
+		console.log(place)
+	}
 }

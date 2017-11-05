@@ -1,14 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { PlacesService } from "../services/places.service";
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html'
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent {
 
-  constructor() { }
+  place: any = {};
 
-  ngOnInit() {
+  constructor(private placesService: PlacesService) {
+
   }
 
+  savePlace() {
+    this.placesService.savePlace(this.place);
+  }
 }

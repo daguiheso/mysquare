@@ -3,20 +3,20 @@
 </ol>
 <div class="container">
   <label>Nombre</label>
-  <input type="text" class="form-control">
+  <input type="text" class="form-control" [(ngModel)]="place.name">
   <br>
   <label>Distancia</label>
-  <input type="number" class="form-control">
+  <input type="number" class="form-control" [(ngModel)]="place.distance">
   <br>
   <label>Cercania</label>
-  <input type="number" class="form-control">
+  <input type="number" class="form-control" [(ngModel)]="place.closeness">
   <br>
   <label>Descripción</label>
-  <textarea class="form-control" cols="10" rows="10"></textarea>
+  <textarea class="form-control" cols="10" rows="3" [(ngModel)]="place.description"></textarea>
   <br>
   <label>Plan</label>
-  <input type="text" class="form-control">
+  <input type="text" class="form-control" [(ngModel)]="place.plain">
   <hr>
-  <a href="" class="btn btn-primary">Enviar</a>
-  <a href="" class="btn btn-default" routerLink="/">Cancelar</a>
+  <a class="btn btn-primary" (click)="savePlace()">Enviar</a>
+  <a class="btn btn-default" routerLink="/">Cancelar</a>
 </div>
