@@ -6,25 +6,31 @@ import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { ResaltarDirective } from './directives/resaltar.directive';
 import { CountClicksDirective } from './directives/count-clicks.directive';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { DetailComponent } from './detail/detail.component';
+import { PlacesComponent } from './places/places.component';
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent},
-  {path: 'places', component: AppComponent}
+  {path: '', component: PlacesComponent},
+  {path: 'places', component: PlacesComponent},
+  {path: 'detail', component: DetailComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ResaltarDirective,
-    CountClicksDirective
+    CountClicksDirective,
+    DetailComponent,
+    PlacesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAQoGRXkVkAT7TDHkIuxwsYlbkVpdvC00w'
-    })
+    }),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
