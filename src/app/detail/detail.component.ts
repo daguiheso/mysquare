@@ -10,6 +10,10 @@ export class DetailComponent {
 
 	constructor(private route: ActivatedRoute) {
 		console.log(this.route.snapshot.params['id'])
+		console.log(this.route.queryParams)
+		console.log(this.route.queryParams)
+		console.log(this.route.snapshot.queryParams['action'])
+		console.log(this.route.snapshot.queryParams['referer'])
 	}
 
 }
