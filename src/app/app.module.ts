@@ -12,6 +12,11 @@ import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
 import { PlacesService } from "./services/places.service";
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 const appRoutes: Routes = [
   {path: '', component: PlacesComponent},
   {path: 'places', component: PlacesComponent},
@@ -34,7 +39,10 @@ const appRoutes: Routes = [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAQoGRXkVkAT7TDHkIuxwsYlbkVpdvC00w'
     }),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     PlacesService
