@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetailComponent } from './detail/detail.component';
 import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
+import { CreateComponent } from './create/create.component';
 import { PlacesService } from "./services/places.service";
 
 import { AngularFireModule } from 'angularfire2';
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   {path: '', component: PlacesComponent},
   {path: 'places', component: PlacesComponent},
   {path: 'detail/:id', component: DetailComponent},
-  { path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: 'create', component: CreateComponent}
 ];
 
 @NgModule({
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
     DetailComponent,
     PlacesComponent,
     ContactComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
