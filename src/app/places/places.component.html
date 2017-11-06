@@ -9,11 +9,11 @@
 			<a routerLink="/create" href="" class="btn btn-primary">Crear establecimiento</a>
 			<ul class="list-group">
 				<ng-container *ngFor="let place of places">
-					<li routerLink="/detail/{{place.id}}" [queryParams]="{action:'view', referer:'google'}" class="list-group-item" *ngIf="place.active">{{place.name}}</li>
+					<li routerLink="/detail/{{place.id}}" class="list-group-item">{{place.name}}</li>
 				</ng-container>
 			</ul>
 		</div>
-		<div class="col-md4">
+		<div class="col-md-4">
 			<h2>Destacados</h2>
 		</div>
 	</div>

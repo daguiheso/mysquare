@@ -23,7 +23,13 @@ export class DetailComponent {
 		console.log(this.route.snapshot.queryParams['action'])
 		console.log(this.route.snapshot.queryParams['referer'])
 		this.id = this.route.snapshot.params['id'];
-		this.place = this.placesService.findPlace(this.id);
+
+		placesService.findPlace(this.id)
+			.valueChanges()
+			.subscribe(place => {
+				this.place = place;
+			});
+
 	}
 
 }
