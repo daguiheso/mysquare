@@ -34,6 +34,6 @@ export class PlacesService {
 
 	public savePlace(place) {
 		console.log(place)
-		this.afDB.database.ref('places/1').set(place);
+		this.afDB.database.ref('places/' + place.id).set(place);
 	}
 }

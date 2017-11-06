@@ -14,6 +14,7 @@ export class CreateComponent {
   }
 
   savePlace() {
+    this.place.id = Date.now()
     this.placesService.savePlace(this.place);
   }
 }
