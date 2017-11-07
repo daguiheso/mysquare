@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   {path: 'places', component: PlacesComponent},
   {path: 'detail/:id', component: DetailComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'create', component: CreateComponent}
+  {path: 'create/:id', component: CreateComponent}
 ];
 
 @NgModule({

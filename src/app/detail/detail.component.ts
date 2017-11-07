@@ -17,11 +17,11 @@ export class DetailComponent {
 		private route: ActivatedRoute,
 		private placesService: PlacesService
 	) {
-		console.log(this.route.snapshot.params['id'])
-		console.log(this.route.queryParams)
-		console.log(this.route.queryParams)
-		console.log(this.route.snapshot.queryParams['action'])
-		console.log(this.route.snapshot.queryParams['referer'])
+		// console.log(this.route.snapshot.params['id'])
+		// console.log(this.route.queryParams)
+		// console.log(this.route.queryParams)
+		// console.log(this.route.snapshot.queryParams['action'])
+		// console.log(this.route.snapshot.queryParams['referer'])
 		this.id = this.route.snapshot.params['id'];
 
 		placesService.findPlace(this.id)

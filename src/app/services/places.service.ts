@@ -17,11 +17,20 @@ export class PlacesService {
 	}
 
 	public savePlace(place) {
-		console.log(place)
+		this.afDB.database.ref('places/' + place.id).set(place);
+	}
+
+	public updatePlace(place) {
 		this.afDB.database.ref('places/' + place.id).set(place);
 	}
 
 	public getGeoData(address) {
 		return this.http.get('http://maps.google.com/maps/api/geocode/json?address=' + address);
 	}
+
+	public getPlace(id) {
+		return this.afDB.object(`places/${id}`);
+	}
+
+
 }
