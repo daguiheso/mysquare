@@ -9,7 +9,11 @@
 			<a routerLink="/create/new" href="" class="btn btn-primary">Crear establecimiento</a>
 			<ul class="list-group">
 				<ng-container *ngFor="let place of places">
-					<li routerLink="/create/{{place.id}}" class="list-group-item">{{place.name}}</li>
+          <li routerLink="/create/{{place.id}}" class="list-group-item">
+            {{place.name | uppercase}}
+            <br />
+            <small>Creado: {{place.id | date | uppercase}}</small>
+          </li>
 				</ng-container>
 			</ul>
 		</div>
