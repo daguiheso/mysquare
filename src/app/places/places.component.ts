@@ -43,4 +43,14 @@ export class PlacesComponent {
 		this.state = (this.state === 'finish') ? 'initial' : 'finish';
 	}
 
+	animationStart(e) {
+		console.log('Comenzado')
+		console.log(e)
+	}
+
+	animationDone(e) {
+		console.log('Terminado')
+		console.log(e)
+	}
+
 }
