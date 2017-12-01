@@ -9,15 +9,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 		trigger('myAnimation', [
 			state('initial', style({
 				opacity: 0,
-				background: 'peru',
-				transform: 'rotate3d(0,0,0,0deg)'
 			})),
 			state('finish', style({
 				opacity: 1,
-				background: 'yellow',
-				transform: 'rotate3d(5,10,20,30deg)'
 			})),
-			transition('initial => finish', animate(2500)),
+			transition('initial => finish', animate(2000)),
 			transition('finish => initial', animate(1000))
 		])
 	]
@@ -36,11 +32,8 @@ export class PlacesComponent {
 			.valueChanges()
 			.subscribe(places => {
 				this.places = places;
+				this.state = 'finish';
 			})
-	}
-
-	animar() {
-		this.state = (this.state === 'finish') ? 'initial' : 'finish';
 	}
 
 	animationStart(e) {
