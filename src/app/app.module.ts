@@ -12,6 +12,7 @@ import { PlacesComponent } from './places/places.component';
 import { ContactComponent } from './contact/contact.component';
 import { CreateComponent } from './create/create.component';
 import { PlacesService } from "./services/places.service";
+import { AuthService} from "./services/auth.service";
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
     HttpModule
   ],
   providers: [
-    PlacesService
+    PlacesService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
