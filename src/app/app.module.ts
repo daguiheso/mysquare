@@ -20,13 +20,17 @@ import { environment } from '../environments/environment';
 import { HttpModule } from "@angular/http";
 import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
   {path: '', component: PlacesComponent},
   {path: 'places', component: PlacesComponent},
   {path: 'detail/:id', component: DetailComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'create/:id', component: CreateComponent}
+  {path: 'create/:id', component: CreateComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({
@@ -38,7 +42,9 @@ const appRoutes: Routes = [
     PlacesComponent,
     ContactComponent,
     CreateComponent,
-    LinkifystrPipe
+    LinkifystrPipe,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
