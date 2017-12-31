@@ -8,9 +8,12 @@ import { AuthService } from '../services/auth.service';
 
 export class RegisterComponent implements OnInit {
 
+	registerData: any = {};
 
-	constructor(private authService: AuthService) {
-		this.authService.register('email', 'password');
+	constructor(private authService: AuthService) { }
+
+	register() {
+		this.authService.register(this.registerData.email, this.registerData.password);
 	}
 
 	ngOnInit() {
