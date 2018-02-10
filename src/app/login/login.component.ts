@@ -7,8 +7,12 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-	constructor(private authService: AuthService) {
-		this.authService.login('email', 'password');
+	loginData: any = {};
+
+	constructor(private authService: AuthService) { }
+
+	login() {
+		this.authService.login(this.loginData.email, this.loginData.password);
 	}
 
 	ngOnInit() {
